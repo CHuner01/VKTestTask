@@ -10,12 +10,13 @@ const useCreateUserForm = () => {
 
     const userSchema = z.object(
         Object.fromEntries(
-            tableData ? Object.entries(tableData[0]).map(([key, field]) => {
+            tableData ? Object.entries(tableData[0]).flatMap(([key, field]) => {
+                if (key === "id") { return []}
                 const zodType = typeMap[field.type];
                 if (!zodType) {
                     throw new Error(`Unsupported type: ${field.type}`);
                 }
-                return [key, zodType];
+                return [[key, zodType]];
             }) : []
         )
     )
@@ -26,7 +27,7 @@ const useCreateUserForm = () => {
 
     const sendUserMutation = useMutation({
         mutationFn: (newUser: IUser) =>
-            api.post('/users5', newUser),
+            api.post('', newUser),
         onSuccess: (data) => {
             console.log(data)
             queryClient.invalidateQueries({ queryKey: ['table'] })

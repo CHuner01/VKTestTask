@@ -6,7 +6,7 @@ import type {IUser} from "../fieldsTypesConfig.ts";
 const useTable = () => {
 
     const fetchData = async () => {
-        const response = await api.get<IUser[]>(`/users5`);
+        const response = await api.get<IUser[]>(``);
         console.log(response.data)
         return response.data
     }

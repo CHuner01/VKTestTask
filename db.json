@@ -1,0 +1,74 @@
+{
+  "users0": [],
+  "users5": [
+    {
+      "firstName": { "title": "Имя", "payload": "Алексей", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Иванов", "type": "string" },
+      "email": { "title": "Почта", "payload": "alex@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 16, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "firstName": { "title": "Имя", "payload": "Алексей", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Иванов", "type": "string" },
+      "email": { "title": "Почта", "payload": "alex@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 16, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "firstName": { "title": "Имя", "payload": "Алексей", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Иванов", "type": "string" },
+      "email": { "title": "Почта", "payload": "alex@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 16, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    }
+  ],
+  "users7": [
+    {
+      "firstName": { "title": "Имя", "payload": "Алексей", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Иванов", "type": "string" },
+      "email": { "title": "Почта", "payload": "alex@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 16, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" },
+      "role": { "title": "Роль", "payload": "ADMIN", "type": "role" },
+      "gender": { "title": "Пол", "payload": "MALE", "type": "gender" }
+    },
+    {
+      "firstName": { "title": "Имя", "payload": "Алексей", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Иванов", "type": "string" },
+      "email": { "title": "Почта", "payload": "alex@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 16, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" },
+      "role": { "title": "Роль", "payload": "ADMIN", "type": "role" },
+      "gender": { "title": "Пол", "payload": "MALE", "type": "gender" }
+    },
+    {
+      "firstName": { "title": "Имя", "payload": "Алексей", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Иванов", "type": "string" },
+      "email": { "title": "Почта", "payload": "alex@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 16, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" },
+      "role": { "title": "Роль", "payload": "ADMIN", "type": "role" },
+      "gender": { "title": "Пол", "payload": "MALE", "type": "gender" }
+    }
+  ],
+  "users15": [
+    {
+      "firstName": { "title": "Имя", "payload": "Алексей", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Иванов", "type": "string" },
+      "email": { "title": "Почта", "payload": "alex@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 16, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" },
+      "role": { "title": "Роль", "payload": "ADMIN", "type": "role" },
+      "gender": { "title": "Пол", "payload": "MALE", "type": "gender" },
+      "city": { "title": "Город", "payload": "Москва", "type": "string" },
+      "pet": { "title": "Имя питомца", "payload": "Дружок", "type": "string" },
+      "company": { "title": "Имя питомца", "payload": "Дружок", "type": "string" },
+      "position": { "title": "Имя питомца", "payload": "Дружок", "type": "string" },
+      "hobby": { "title": "Имя питомца", "payload": "Дружок", "type": "string" },
+      "telegram": { "title": "Имя питомца", "payload": "Дружок", "type": "string" },
+      "language": { "title": "Имя питомца", "payload": "Дружок", "type": "string" },
+      "favoriteMovie": { "title": "Имя питомца", "payload": "Дружок", "type": "string" }
+    }
+  ]
+}

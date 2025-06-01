@@ -30,7 +30,6 @@ const UrlProvider: FC<UrlProviderProps> = ({children}) => {
     const queryClient = useQueryClient();
 
     useEffect(() => {
-        console.log(url)
         queryClient.invalidateQueries({ queryKey: ['table', url] })
     }, [url])
 

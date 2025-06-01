@@ -6,10 +6,9 @@ import Navbar from "../widgets/navbar/Navbar.tsx";
 import Table from "../widgets/table/Table.tsx";
 import UrlProvider from "./contexts/UrlContext.tsx";
 
-const queryClient = new QueryClient();
 
 function App() {
-
+    const queryClient = new QueryClient();
 
     return (
         <Theme>

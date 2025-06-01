@@ -1237,6 +1237,84 @@
         "payload": "sadasdad",
         "type": "string"
       }
+    },
+    {
+      "id": "7a35",
+      "firstName": {
+        "title": "Имя",
+        "payload": "ывфыавфыа",
+        "type": "string"
+      },
+      "lastname": {
+        "title": "Фамилия",
+        "payload": "ывавфыафы",
+        "type": "string"
+      },
+      "email": {
+        "title": "Почта",
+        "payload": "qwe@gmail.com",
+        "type": "email"
+      },
+      "age": {
+        "title": "Возраст",
+        "payload": 23,
+        "type": "number"
+      },
+      "country": {
+        "title": "Страна",
+        "payload": "Россия",
+        "type": "string"
+      },
+      "role": {
+        "title": "Роль",
+        "payload": "USER",
+        "type": "role"
+      },
+      "gender": {
+        "title": "Пол",
+        "payload": "FEMALE",
+        "type": "gender"
+      },
+      "city": {
+        "title": "Город",
+        "payload": "фывфыв",
+        "type": "string"
+      },
+      "pet": {
+        "title": "Имя питомца",
+        "payload": "ывфыафывафыа",
+        "type": "string"
+      },
+      "company": {
+        "title": "Компания",
+        "payload": "ывафыва",
+        "type": "string"
+      },
+      "position": {
+        "title": "Позиция",
+        "payload": "ыфвафы",
+        "type": "string"
+      },
+      "hobby": {
+        "title": "Хобби",
+        "payload": "вафыафыа",
+        "type": "string"
+      },
+      "telegram": {
+        "title": "Телеграм",
+        "payload": "@dfasdfas",
+        "type": "telegram"
+      },
+      "language": {
+        "title": "Язык",
+        "payload": "авыфаыва",
+        "type": "string"
+      },
+      "favoriteMovie": {
+        "title": "Любимый фильм",
+        "payload": "фыафывафы",
+        "type": "string"
+      }
     }
   ]
 }

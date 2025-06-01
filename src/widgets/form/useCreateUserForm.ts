@@ -4,12 +4,14 @@ import useData from "../../shared/hooks/useData.ts";
 import {z} from "zod";
 import {type IUser, selectOptions, typeMap} from "../../shared/fieldsTypesConfig.ts";
 import {useEffect, useState} from "react";
+import {useUrl} from "../../app/contexts/UrlContext.tsx";
 
 const useCreateUserForm = () => {
 
     const { data: { tableData } } = useData();
     const [open, setOpen] = useState(false)
     const [isDisabled, setIsDisabled] = useState(false)
+    const { url } = useUrl()
 
     useEffect(() => {
         setIsDisabled(!tableData)
@@ -34,11 +36,11 @@ const useCreateUserForm = () => {
 
     const { mutate, isPending } = useMutation({
         mutationFn: (newUser: IUser) =>
-            api.post('', newUser),
+            api.post(url, newUser),
         onSuccess: (data) => {
             console.log(data)
             setOpen(false)
-            queryClient.invalidateQueries({ queryKey: ['table'] })
+            queryClient.invalidateQueries({ queryKey: ['table', url] })
         },
         onError: (error) => {
             console.error(error);

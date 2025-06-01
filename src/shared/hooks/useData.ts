@@ -3,6 +3,8 @@ import {api} from "../api.ts";
 import {type IUser, selectOptions} from "../fieldsTypesConfig.ts";
 import {useInView} from "react-intersection-observer";
 import {useEffect} from "react";
+import {type UrlType, useUrl} from "../../app/contexts/UrlContext.tsx";
+
 
 const USERS_PER_PAGE = 15;
 
@@ -20,14 +22,15 @@ interface IDataResponse {
     pages: IPage[];
     pageParams: number[];
 }
-type MyQueryContext = QueryFunctionContext<[string], number>;
+type MyQueryContext = QueryFunctionContext<[string, UrlType], number>;
 
 const useData = () => {
 
+    const { url } = useUrl()
     const { ref, inView } = useInView();
 
     const fetchData = async ({ pageParam = 1 }: MyQueryContext): Promise<IPage> => {
-        const response = await api.get<IPage>(``, {
+        const response = await api.get<IPage>(url, {
             params: {
                 _page: pageParam,
                 _per_page: USERS_PER_PAGE,
@@ -44,9 +47,9 @@ const useData = () => {
         fetchNextPage,
         hasNextPage,
         isFetchingNextPage,
-    } = useInfiniteQuery<IPage, Error, IDataResponse, [string], number>
+    } = useInfiniteQuery<IPage, Error, IDataResponse, [string, UrlType], number>
     ({
-        queryKey: ['table'],
+        queryKey: ['table', url],
         queryFn: fetchData,
         initialPageParam: 1,
         getNextPageParam: (lastPage) => lastPage.next ?? undefined

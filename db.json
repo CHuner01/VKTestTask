@@ -1389,6 +1389,84 @@
         "payload": "dsafasfas",
         "type": "string"
       }
+    },
+    {
+      "id": "7a35",
+      "firstName": {
+        "title": "Имя",
+        "payload": "fadssaD",
+        "type": "string"
+      },
+      "lastname": {
+        "title": "Фамилия",
+        "payload": "ASDasd",
+        "type": "string"
+      },
+      "email": {
+        "title": "Почта",
+        "payload": "1@gmail.com",
+        "type": "email"
+      },
+      "age": {
+        "title": "Возраст",
+        "payload": 3,
+        "type": "number"
+      },
+      "country": {
+        "title": "Страна",
+        "payload": "Россия",
+        "type": "string"
+      },
+      "role": {
+        "title": "Роль",
+        "payload": "ADMIN",
+        "type": "role"
+      },
+      "gender": {
+        "title": "Пол",
+        "payload": "MALE",
+        "type": "gender"
+      },
+      "city": {
+        "title": "Город",
+        "payload": "asdas",
+        "type": "string"
+      },
+      "pet": {
+        "title": "Имя питомца",
+        "payload": "dasd",
+        "type": "string"
+      },
+      "company": {
+        "title": "Компания",
+        "payload": "asdasd",
+        "type": "string"
+      },
+      "position": {
+        "title": "Позиция",
+        "payload": "asd",
+        "type": "string"
+      },
+      "hobby": {
+        "title": "Хобби",
+        "payload": "asdasd",
+        "type": "string"
+      },
+      "telegram": {
+        "title": "Телеграм",
+        "payload": "@asdasd",
+        "type": "telegram"
+      },
+      "language": {
+        "title": "Язык",
+        "payload": "asdasd",
+        "type": "string"
+      },
+      "favoriteMovie": {
+        "title": "Любимый фильм",
+        "payload": "sadasdad",
+        "type": "string"
+      }
     }
   ]
 }

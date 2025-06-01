@@ -22,7 +22,7 @@ interface IDataResponse {
 }
 type MyQueryContext = QueryFunctionContext<[string], number>;
 
-const useTable = () => {
+const useData = () => {
 
     const { ref, inView } = useInView();
 
@@ -38,7 +38,8 @@ const useTable = () => {
     };
 
     const {
-        data: myData,
+        data,
+        isLoading,
         error,
         fetchNextPage,
         hasNextPage,
@@ -57,14 +58,19 @@ const useTable = () => {
         }
     }, [inView, hasNextPage, fetchNextPage, isFetchingNextPage]);
 
-    const tableData = myData?.pages.flatMap(page => page.data);
+    const tableData = data?.pages.flatMap(page => page.data);
 
     return {
-        tableData,
-        error,
+        data: {
+            tableData,
+            selectOptions
+        },
+        state: {
+            isLoading,
+            error
+        },
         ref,
-        selectOptions
     }
 };
 
-export default useTable;
+export default useData;

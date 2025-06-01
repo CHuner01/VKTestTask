@@ -27,8 +27,7 @@ export const typeMap: Record<string, ZodTypeAny> = {
         .email("Некорректный email"),
     role: z.enum(["ADMIN", "USER"]),
     gender: z.enum(["MALE", "FEMALE"]),
-    telegram: z
-        .string()
+    telegram: z.string()
         .trim()
         .regex(/^@([a-zA-Z][a-zA-Z0-9_]{4,31})$/, "Введите по примеру: @user. Минимум 5 символов")
 }

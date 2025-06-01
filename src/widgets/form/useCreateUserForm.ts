@@ -1,14 +1,19 @@
 import {useMutation, useQueryClient} from "@tanstack/react-query";
 import {api} from "../../shared/api.ts";
-import useTable from "../../shared/hooks/useTable.ts";
+import useData from "../../shared/hooks/useData.ts";
 import {z} from "zod";
 import {type IUser, selectOptions, typeMap} from "../../shared/fieldsTypesConfig.ts";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 const useCreateUserForm = () => {
 
-    const { tableData } = useTable();
+    const { data: { tableData } } = useData();
     const [open, setOpen] = useState(false)
+    const [isDisabled, setIsDisabled] = useState(false)
+
+    useEffect(() => {
+        setIsDisabled(!tableData)
+    }, [tableData]);
 
     const userSchema = z.object(
         Object.fromEntries(
@@ -27,7 +32,7 @@ const useCreateUserForm = () => {
 
     const queryClient = useQueryClient();
 
-    const sendUserMutation = useMutation({
+    const { mutate, isPending } = useMutation({
         mutationFn: (newUser: IUser) =>
             api.post('', newUser),
         onSuccess: (data) => {
@@ -51,19 +56,27 @@ const useCreateUserForm = () => {
                 payload: value,
             }
         })
-        sendUserMutation.mutate(newUser)
+        mutate(newUser)
         console.log(data)
         console.log(newUser)
     }
 
 
     return {
-        tableData,
-        open,
-        setOpen,
-        userSchema,
-        selectOptions,
-        onSubmit,
+        data: {
+            tableData,
+            userSchema,
+            selectOptions,
+        },
+        state: {
+            open,
+            isDisabled,
+            isPending
+        },
+        functions: {
+            setOpen,
+            onSubmit,
+        }
     }
 };
 

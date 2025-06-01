@@ -8,7 +8,11 @@ import {useEffect} from "react";
 
 const CreateUserForm = () => {
 
-    const { tableData, userSchema, selectOptions, onSubmit, open, setOpen } = useCreateUserForm()
+    const {
+        data: {selectOptions, tableData, userSchema},
+        state: { open, isDisabled, isPending },
+        functions: { onSubmit, setOpen },
+    } = useCreateUserForm()
 
 
     type TUserSchema = z.infer<typeof userSchema>
@@ -29,17 +33,16 @@ const CreateUserForm = () => {
     }, [open]);
 
 
-    if (!tableData) {
-        return <p>Нет данных</p>
-    }
-
     type InputType = "text" | "number"
 
     return (
         <>
             <Dialog.Root open={open} onOpenChange={(open) => {setOpen(open)}}>
                 <Dialog.Trigger>
-                    <Button>Добавить запись</Button>
+                    <Button
+                        disabled={isDisabled}
+                        className={styles.button}
+                    >Добавить запись</Button>
                 </Dialog.Trigger>
 
                 <Dialog.Content maxWidth="450px" >
@@ -51,7 +54,7 @@ const CreateUserForm = () => {
 
                     <Flex direction="column" gap="1">
 
-                            {Object.entries(tableData[0]).map(([key, val]) => {
+                            {tableData && Object.entries(tableData[0]).map(([key, val]) => {
                                 if (key === 'id') return null;
                                 let inputType: InputType = 'text';
                                 if (val.type === 'number') inputType = 'number';
@@ -95,7 +98,6 @@ const CreateUserForm = () => {
                                                         {val.title}
                                                     </Text>
                                                     <TextField.Root
-                                                        // className={styles.inputError}
                                                         color={errors[key] ? "red" : undefined}
                                                         variant={errors[key] ? "soft" : undefined}
                                                         type={inputType}
@@ -120,7 +122,10 @@ const CreateUserForm = () => {
                                 Отмена
                             </Button>
                         </Dialog.Close>
-                        <Button type="submit">Сохранить</Button>
+                        <Button
+                            type="submit"
+                            disabled={isPending}
+                        >Сохранить</Button>
                     </Flex>
                     </form>
                 </Dialog.Content>

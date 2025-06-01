@@ -3,10 +3,12 @@ import {api} from "../../shared/api.ts";
 import useTable from "../../shared/hooks/useTable.ts";
 import {z} from "zod";
 import {type IUser, selectOptions, typeMap} from "../../shared/fieldsTypesConfig.ts";
+import {useState} from "react";
 
 const useCreateUserForm = () => {
 
     const { tableData } = useTable();
+    const [open, setOpen] = useState(false)
 
     const userSchema = z.object(
         Object.fromEntries(
@@ -30,6 +32,7 @@ const useCreateUserForm = () => {
             api.post('', newUser),
         onSuccess: (data) => {
             console.log(data)
+            setOpen(false)
             queryClient.invalidateQueries({ queryKey: ['table'] })
         },
         onError: (error) => {
@@ -56,6 +59,8 @@ const useCreateUserForm = () => {
 
     return {
         tableData,
+        open,
+        setOpen,
         userSchema,
         selectOptions,
         onSubmit,

@@ -4,10 +4,12 @@ import {zodResolver} from "@hookform/resolvers/zod";
 import useCreateUserForm from "./useCreateUserForm.ts";
 import styles from "./CreateUserForm.module.scss"
 import {Button, Dialog, Flex, Select, Text, TextField} from "@radix-ui/themes";
+import {useEffect} from "react";
 
 const CreateUserForm = () => {
 
-    const { tableData, userSchema, selectOptions, onSubmit } = useCreateUserForm()
+    const { tableData, userSchema, selectOptions, onSubmit, open, setOpen } = useCreateUserForm()
+
 
     type TUserSchema = z.infer<typeof userSchema>
 
@@ -15,10 +17,16 @@ const CreateUserForm = () => {
         control,
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm<TUserSchema>({
         resolver: zodResolver(userSchema),
+        mode: "onChange",
     })
+
+    useEffect(() => {
+        reset()
+    }, [open]);
 
 
     if (!tableData) {
@@ -29,44 +37,7 @@ const CreateUserForm = () => {
 
     return (
         <>
-            {/*<form onSubmit={handleSubmit(onSubmit)} className={styles.container}>*/}
-            {/*    {Object.entries(tableData[0]).map(([key, val]) => {*/}
-            {/*        if (key === 'id') return null;*/}
-            {/*        let inputType = 'text';*/}
-            {/*        if (val.type === 'number') inputType = 'number';*/}
-
-            {/*        return (*/}
-            {/*            <div key={key}>*/}
-            {/*                <label>{key}</label>*/}
-
-            {/*                {(val.type === 'role' || val.type === 'gender')*/}
-            {/*                    ? <select*/}
-            {/*                        {...register(key)}*/}
-            {/*                    >*/}
-            {/*                        {Object.entries(selectOptions[val.type]).map(([value, label]) => (*/}
-            {/*                            <option key={value} value={value}>*/}
-            {/*                                {label}*/}
-            {/*                            </option>*/}
-            {/*                        ))}*/}
-            {/*                    </select>*/}
-            {/*                    : <input*/}
-            {/*                        type={inputType}*/}
-            {/*                        {...register(key)}*/}
-            {/*                    />*/}
-            {/*                }*/}
-
-            {/*                {errors[key] && <p>{errors[key]?.message as string}</p>}*/}
-            {/*            </div>*/}
-            {/*        );*/}
-            {/*    })}*/}
-
-            {/*    <button type="submit">Создать</button>*/}
-            {/*    <button type="button" onClick={() => console.log(getValues)}>Что</button>*/}
-            {/*</form>*/}
-
-
-
-            <Dialog.Root>
+            <Dialog.Root open={open} onOpenChange={(open) => {setOpen(open)}}>
                 <Dialog.Trigger>
                     <Button>Добавить запись</Button>
                 </Dialog.Trigger>
@@ -78,7 +49,7 @@ const CreateUserForm = () => {
                         Заполните поля, чтобы создать нового пользователя
                     </Dialog.Description>
 
-                    <Flex direction="column" gap="3">
+                    <Flex direction="column" gap="1">
 
                             {Object.entries(tableData[0]).map(([key, val]) => {
                                 if (key === 'id') return null;
@@ -90,9 +61,9 @@ const CreateUserForm = () => {
 
                                 return (
                                     <div key={key}>
-                                        {(val.type === 'role' || val.type === 'gender')
-                                            ?
-                                            <>
+                                        <div className={errors[key] ? "" : styles.container}>
+                                            {(val.type === 'role' || val.type === 'gender')
+                                                ?
                                                 <label>
                                                     <Text as="div" size="2" mb="1" weight="bold">
                                                         {val.title}
@@ -118,20 +89,26 @@ const CreateUserForm = () => {
                                                         )}
                                                     />
                                                 </label>
-                                            </>
-                                            :
-                                            <label>
-                                                <Text as="div" size="2" mb="1" weight="bold">
-                                                    {val.title}
-                                                </Text>
-                                                <TextField.Root
-                                                    type={inputType}
-                                                    {...register(key)}
-                                                />
-                                            </label>
-                                        }
+                                                :
+                                                <label>
+                                                    <Text as="div" size="2" mb="1" weight="bold">
+                                                        {val.title}
+                                                    </Text>
+                                                    <TextField.Root
+                                                        // className={styles.inputError}
+                                                        color={errors[key] ? "red" : undefined}
+                                                        variant={errors[key] ? "soft" : undefined}
+                                                        type={inputType}
+                                                        {...register(key)}
+                                                    />
+                                                </label>
+                                            }
+                                        </div>
 
-                                        {errors[key] && <p>{errors[key]?.message as string}</p>}
+                                        {errors[key]
+                                            && <p className={styles.errorMessage}>
+                                            {errors[key]?.message as string}
+                                        </p>}
                                     </div>
                                 );
                             })}
@@ -143,9 +120,7 @@ const CreateUserForm = () => {
                                 Отмена
                             </Button>
                         </Dialog.Close>
-                        <Dialog.Close>
-                            <Button type="submit">Сохранить</Button>
-                        </Dialog.Close>
+                        <Button type="submit">Сохранить</Button>
                     </Flex>
                     </form>
                 </Dialog.Content>

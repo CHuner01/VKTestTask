@@ -4,7 +4,7 @@ import {type IUser, selectOptions} from "../fieldsTypesConfig.ts";
 import {useInView} from "react-intersection-observer";
 import {useEffect} from "react";
 
-const USERS_PER_PAGE = 5;
+const USERS_PER_PAGE = 15;
 
 interface IPage {
     first: number;
@@ -57,10 +57,7 @@ const useTable = () => {
         }
     }, [inView, hasNextPage, fetchNextPage, isFetchingNextPage]);
 
-    // const tableData = myData?.pages.flat()
     const tableData = myData?.pages.flatMap(page => page.data);
-    console.log(myData);
-    console.log(tableData);
 
     return {
         tableData,

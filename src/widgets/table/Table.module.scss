@@ -4,6 +4,7 @@
   flex: 1;
   overflow-y: auto;
   text-align: center;
+  background-color: #edeef0;
 
 
   padding: 30px;
@@ -17,17 +18,18 @@
   overflow: hidden;
   display: block;
   width: 100%;
-
+  overflow-x: auto;
+  min-width: 1200px;
 }
 
 .table {
   border: none;
   width: 100%;
+  //min-width: 1200px;
   border-collapse: collapse;
   border-spacing: 0;
   table-layout: fixed;
   font-size: 14px;
-
 }
 
 .thead {

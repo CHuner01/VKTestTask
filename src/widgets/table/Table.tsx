@@ -3,7 +3,7 @@ import styles from "./Table.module.scss"
 
 const Table = () => {
 
-    const { tableData } = useTable()
+    const { tableData, selectOptions, ref, error } = useTable()
 
     if (!tableData) {
         return <p>Нет данных</p>
@@ -11,6 +11,7 @@ const Table = () => {
 
     const headers = Object.keys(tableData[0]).filter(key => key !== 'id');
 
+    if (error) return <p>Походу здесь ошибка</p>
 
     return (
         <div className={styles.container}>
@@ -30,13 +31,17 @@ const Table = () => {
                         <tr key={index} className={styles.tableRow}>
                             {headers.map((key) => (
                                 <td key={key} className={styles.td}>
-                                    {String(user[key].payload)}
+                                    {(key === "role" || key === "gender")
+                                        ? selectOptions[key as keyof typeof selectOptions][user[key].payload as keyof typeof selectOptions[typeof key]]
+                                        : String(user[key].payload)}
                                 </td>
                             ))}
                         </tr>
                     ))}
                     </tbody>
                 </table>
+                {tableData && <div ref={ref}></div>}
+                {/*<div ref={ref}></div>*/}
             </div>
         </div>
     );

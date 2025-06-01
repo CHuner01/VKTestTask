@@ -1,23 +1,72 @@
-import {useQuery} from "@tanstack/react-query";
+import {type QueryFunctionContext, useInfiniteQuery} from "@tanstack/react-query";
 import {api} from "../api.ts";
-import type {IUser} from "../fieldsTypesConfig.ts";
+import {type IUser, selectOptions} from "../fieldsTypesConfig.ts";
+import {useInView} from "react-intersection-observer";
+import {useEffect} from "react";
 
+const USERS_PER_PAGE = 5;
+
+interface IPage {
+    first: number;
+    prev: number | null;
+    next: number | null;
+    last: number;
+    pages: number;
+    items: number;
+    data: IUser[];
+}
+
+interface IDataResponse {
+    pages: IPage[];
+    pageParams: number[];
+}
+type MyQueryContext = QueryFunctionContext<[string], number>;
 
 const useTable = () => {
 
-    const fetchData = async () => {
-        const response = await api.get<IUser[]>(``);
-        console.log(response.data)
-        return response.data
-    }
+    const { ref, inView } = useInView();
 
-    const { data: tableData } = useQuery<IUser[]>({
+    const fetchData = async ({ pageParam = 1 }: MyQueryContext): Promise<IPage> => {
+        const response = await api.get<IPage>(``, {
+            params: {
+                _page: pageParam,
+                _per_page: USERS_PER_PAGE,
+            }
+        });
+
+        return response.data
+    };
+
+    const {
+        data: myData,
+        error,
+        fetchNextPage,
+        hasNextPage,
+        isFetchingNextPage,
+    } = useInfiniteQuery<IPage, Error, IDataResponse, [string], number>
+    ({
         queryKey: ['table'],
         queryFn: fetchData,
+        initialPageParam: 1,
+        getNextPageParam: (lastPage) => lastPage.next ?? undefined
     })
+
+    useEffect(() => {
+        if (inView && hasNextPage && !isFetchingNextPage) {
+            fetchNextPage();
+        }
+    }, [inView, hasNextPage, fetchNextPage, isFetchingNextPage]);
+
+    // const tableData = myData?.pages.flat()
+    const tableData = myData?.pages.flatMap(page => page.data);
+    console.log(myData);
+    console.log(tableData);
 
     return {
         tableData,
+        error,
+        ref,
+        selectOptions
     }
 };
 

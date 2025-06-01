@@ -1,89 +1,268 @@
 {
-  "users0": [],
   "users5": [
     {
-      "firstName": {
-        "title": "Имя",
-        "payload": "Алексей",
-        "type": "string"
-      },
-      "lastname": {
-        "title": "Фамилия",
-        "payload": "Иванов",
-        "type": "string"
-      },
-      "email": {
-        "title": "Почта",
-        "payload": "alex@example.com",
-        "type": "email"
-      },
-      "age": {
-        "title": "Возраст",
-        "payload": 16,
-        "type": "number"
-      },
-      "country": {
-        "title": "Страна",
-        "payload": "Россия",
-        "type": "string"
-      },
-      "id": "9291"
+      "id": 1,
+      "firstName": { "title": "Имя", "payload": "Алексей", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Иванов", "type": "string" },
+      "email": { "title": "Почта", "payload": "alex1@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 16, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
     },
     {
-      "firstName": {
-        "title": "Имя",
-        "payload": "Алексей",
-        "type": "string"
-      },
-      "lastname": {
-        "title": "Фамилия",
-        "payload": "Иванов",
-        "type": "string"
-      },
-      "email": {
-        "title": "Почта",
-        "payload": "alex@example.com",
-        "type": "email"
-      },
-      "age": {
-        "title": "Возраст",
-        "payload": 16,
-        "type": "number"
-      },
-      "country": {
-        "title": "Страна",
-        "payload": "Россия",
-        "type": "string"
-      },
-      "id": "67f7"
+      "id": 2,
+      "firstName": { "title": "Имя", "payload": "Дмитрий", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Смирнов", "type": "string" },
+      "email": { "title": "Почта", "payload": "dmitry@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 17, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
     },
     {
-      "firstName": {
-        "title": "Имя",
-        "payload": "Алексей",
-        "type": "string"
-      },
-      "lastname": {
-        "title": "Фамилия",
-        "payload": "Иванов",
-        "type": "string"
-      },
-      "email": {
-        "title": "Почта",
-        "payload": "alex@example.com",
-        "type": "email"
-      },
-      "age": {
-        "title": "Возраст",
-        "payload": 16,
-        "type": "number"
-      },
-      "country": {
-        "title": "Страна",
-        "payload": "Россия",
-        "type": "string"
-      },
-      "id": "1ce5"
+      "id": 3,
+      "firstName": { "title": "Имя", "payload": "Иван", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Кузнецов", "type": "string" },
+      "email": { "title": "Почта", "payload": "ivan@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 18, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 4,
+      "firstName": { "title": "Имя", "payload": "Михаил", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Попов", "type": "string" },
+      "email": { "title": "Почта", "payload": "mikhail@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 19, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 5,
+      "firstName": { "title": "Имя", "payload": "Артем", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Волков", "type": "string" },
+      "email": { "title": "Почта", "payload": "artem@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 20, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 6,
+      "firstName": { "title": "Имя", "payload": "Олег", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Лебедев", "type": "string" },
+      "email": { "title": "Почта", "payload": "oleg@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 21, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 7,
+      "firstName": { "title": "Имя", "payload": "Никита", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Морозов", "type": "string" },
+      "email": { "title": "Почта", "payload": "nikita@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 22, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 8,
+      "firstName": { "title": "Имя", "payload": "Сергей", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Новиков", "type": "string" },
+      "email": { "title": "Почта", "payload": "sergey@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 23, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 9,
+      "firstName": { "title": "Имя", "payload": "Юрий", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Соколов", "type": "string" },
+      "email": { "title": "Почта", "payload": "yuri@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 24, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 10,
+      "firstName": { "title": "Имя", "payload": "Владимир", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Соловьёв", "type": "string" },
+      "email": { "title": "Почта", "payload": "vladimir@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 25, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 11,
+      "firstName": { "title": "Имя", "payload": "Виктор", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Орлов", "type": "string" },
+      "email": { "title": "Почта", "payload": "viktor@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 26, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 12,
+      "firstName": { "title": "Имя", "payload": "Андрей", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Мельников", "type": "string" },
+      "email": { "title": "Почта", "payload": "andrey@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 27, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 13,
+      "firstName": { "title": "Имя", "payload": "Сергей", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Новиков", "type": "string" },
+      "email": { "title": "Почта", "payload": "sergey@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 28, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 14,
+      "firstName": { "title": "Имя", "payload": "Екатерина", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Васильева", "type": "string" },
+      "email": { "title": "Почта", "payload": "ekaterina@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 25, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 15,
+      "firstName": { "title": "Имя", "payload": "Алина", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Григорьева", "type": "string" },
+      "email": { "title": "Почта", "payload": "alina@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 24, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 16,
+      "firstName": { "title": "Имя", "payload": "Максим", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Соколов", "type": "string" },
+      "email": { "title": "Почта", "payload": "maksim@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 29, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 17,
+      "firstName": { "title": "Имя", "payload": "Ольга", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Козлова", "type": "string" },
+      "email": { "title": "Почта", "payload": "olga@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 26, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 18,
+      "firstName": { "title": "Имя", "payload": "Денис", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Петров", "type": "string" },
+      "email": { "title": "Почта", "payload": "denis@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 30, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 19,
+      "firstName": { "title": "Имя", "payload": "Ирина", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Воробьева", "type": "string" },
+      "email": { "title": "Почта", "payload": "irina@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 27, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 20,
+      "firstName": { "title": "Имя", "payload": "Александр", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Морозов", "type": "string" },
+      "email": { "title": "Почта", "payload": "alexander@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 31, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 21,
+      "firstName": { "title": "Имя", "payload": "Татьяна", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Соколова", "type": "string" },
+      "email": { "title": "Почта", "payload": "tatiana@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 28, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 22,
+      "firstName": { "title": "Имя", "payload": "Владимир", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Кузьмин", "type": "string" },
+      "email": { "title": "Почта", "payload": "vladimir@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 32, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 23,
+      "firstName": { "title": "Имя", "payload": "Марина", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Лебедева", "type": "string" },
+      "email": { "title": "Почта", "payload": "marina@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 26, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 24,
+      "firstName": { "title": "Имя", "payload": "Николай", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Орлов", "type": "string" },
+      "email": { "title": "Почта", "payload": "nikolay@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 33, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 25,
+      "firstName": { "title": "Имя", "payload": "Алина", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Зайцева", "type": "string" },
+      "email": { "title": "Почта", "payload": "alina.z@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 24, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 26,
+      "firstName": { "title": "Имя", "payload": "Виктор", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Романов", "type": "string" },
+      "email": { "title": "Почта", "payload": "viktor@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 29, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 27,
+      "firstName": { "title": "Имя", "payload": "Ксения", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Морозова", "type": "string" },
+      "email": { "title": "Почта", "payload": "ksenia@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 27, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 28,
+      "firstName": { "title": "Имя", "payload": "Евгений", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Сергеев", "type": "string" },
+      "email": { "title": "Почта", "payload": "evgeny@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 31, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 29,
+      "firstName": { "title": "Имя", "payload": "Мария", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Федорова", "type": "string" },
+      "email": { "title": "Почта", "payload": "maria@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 25, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 30,
+      "firstName": { "title": "Имя", "payload": "Илья", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Крылов", "type": "string" },
+      "email": { "title": "Почта", "payload": "ilya@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 30, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 31,
+      "firstName": { "title": "Имя", "payload": "Анастасия", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Лазарева", "type": "string" },
+      "email": { "title": "Почта", "payload": "anastasia@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 26, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 32,
+      "firstName": { "title": "Имя", "payload": "Павел", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Тимофеев", "type": "string" },
+      "email": { "title": "Почта", "payload": "pavel@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 28, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
+    },
+    {
+      "id": 33,
+      "firstName": { "title": "Имя", "payload": "Вероника", "type": "string" },
+      "lastname": { "title": "Фамилия", "payload": "Михайлова", "type": "string" },
+      "email": { "title": "Почта", "payload": "veronika@example.com", "type": "email" },
+      "age": { "title": "Возраст", "payload": 27, "type": "number" },
+      "country": { "title": "Страна", "payload": "Россия", "type": "string" }
     }
   ],
   "users7": [
@@ -124,386 +303,6 @@
         "type": "gender"
       },
       "id": "fe42"
-    },
-    {
-      "firstName": {
-        "title": "Имя",
-        "payload": "Алексей",
-        "type": "string"
-      },
-      "lastname": {
-        "title": "Фамилия",
-        "payload": "Иванов",
-        "type": "string"
-      },
-      "email": {
-        "title": "Почта",
-        "payload": "alex@example.com",
-        "type": "email"
-      },
-      "age": {
-        "title": "Возраст",
-        "payload": 16,
-        "type": "number"
-      },
-      "country": {
-        "title": "Страна",
-        "payload": "Россия",
-        "type": "string"
-      },
-      "role": {
-        "title": "Роль",
-        "payload": "ADMIN",
-        "type": "role"
-      },
-      "gender": {
-        "title": "Пол",
-        "payload": "MALE",
-        "type": "gender"
-      },
-      "id": "b484"
-    },
-    {
-      "firstName": {
-        "title": "Имя",
-        "payload": "Алексей",
-        "type": "string"
-      },
-      "lastname": {
-        "title": "Фамилия",
-        "payload": "Иванов",
-        "type": "string"
-      },
-      "email": {
-        "title": "Почта",
-        "payload": "alex@example.com",
-        "type": "email"
-      },
-      "age": {
-        "title": "Возраст",
-        "payload": 16,
-        "type": "number"
-      },
-      "country": {
-        "title": "Страна",
-        "payload": "Россия",
-        "type": "string"
-      },
-      "role": {
-        "title": "Роль",
-        "payload": "ADMIN",
-        "type": "role"
-      },
-      "gender": {
-        "title": "Пол",
-        "payload": "MALE",
-        "type": "gender"
-      },
-      "id": "2f67"
-    },
-    {
-      "id": "fe42",
-      "firstName": {
-        "title": "Имя",
-        "payload": "Роман",
-        "type": "string"
-      },
-      "lastname": {
-        "title": "Фамилия",
-        "payload": "Кравцов",
-        "type": "string"
-      },
-      "email": {
-        "title": "Почта",
-        "payload": "1@gmail.com",
-        "type": "email"
-      },
-      "age": {
-        "title": "Возраст",
-        "payload": 12,
-        "type": "number"
-      },
-      "country": {
-        "title": "Страна",
-        "payload": "Россия",
-        "type": "string"
-      },
-      "role": {
-        "title": "Роль",
-        "payload": "ADMIN",
-        "type": "role"
-      },
-      "gender": {
-        "title": "Пол",
-        "payload": "MALE",
-        "type": "gender"
-      }
-    },
-    {
-      "id": "fe42",
-      "firstName": {
-        "title": "Имя",
-        "payload": "Роман",
-        "type": "string"
-      },
-      "lastname": {
-        "title": "Фамилия",
-        "payload": "Кравцов",
-        "type": "string"
-      },
-      "email": {
-        "title": "Почта",
-        "payload": "1@gmail.com",
-        "type": "email"
-      },
-      "age": {
-        "title": "Возраст",
-        "payload": 12,
-        "type": "number"
-      },
-      "country": {
-        "title": "Страна",
-        "payload": "Россия",
-        "type": "string"
-      },
-      "role": {
-        "title": "Роль",
-        "payload": "ADMIN",
-        "type": "role"
-      },
-      "gender": {
-        "title": "Пол",
-        "payload": "MALE",
-        "type": "gender"
-      }
-    },
-    {
-      "id": "fe42",
-      "firstName": {
-        "title": "Имя",
-        "payload": "dsafasdfs",
-        "type": "string"
-      },
-      "lastname": {
-        "title": "Фамилия",
-        "payload": "sadfadsf",
-        "type": "string"
-      },
-      "email": {
-        "title": "Почта",
-        "payload": "1@gmail.com",
-        "type": "email"
-      },
-      "age": {
-        "title": "Возраст",
-        "payload": 12,
-        "type": "number"
-      },
-      "country": {
-        "title": "Страна",
-        "payload": "Россия",
-        "type": "string"
-      },
-      "role": {
-        "title": "Роль",
-        "payload": "ADMIN",
-        "type": "role"
-      },
-      "gender": {
-        "title": "Пол",
-        "payload": "MALE",
-        "type": "gender"
-      }
-    },
-    {
-      "id": "fe42",
-      "firstName": {
-        "title": "Имя",
-        "payload": "as",
-        "type": "string"
-      },
-      "lastname": {
-        "title": "Фамилия",
-        "payload": "sadfadsf",
-        "type": "string"
-      },
-      "email": {
-        "title": "Почта",
-        "payload": "1@gmail.com",
-        "type": "email"
-      },
-      "age": {
-        "title": "Возраст",
-        "payload": 12,
-        "type": "number"
-      },
-      "country": {
-        "title": "Страна",
-        "payload": "Россия",
-        "type": "string"
-      },
-      "role": {
-        "title": "Роль",
-        "payload": "ADMIN",
-        "type": "role"
-      },
-      "gender": {
-        "title": "Пол",
-        "payload": "MALE",
-        "type": "gender"
-      }
-    },
-    {
-      "id": "fe42",
-      "firstName": {
-        "title": "Имя",
-        "payload": "as",
-        "type": "string"
-      },
-      "lastname": {
-        "title": "Фамилия",
-        "payload": "sadfadsf",
-        "type": "string"
-      },
-      "email": {
-        "title": "Почта",
-        "payload": "1@gmail.com",
-        "type": "email"
-      },
-      "age": {
-        "title": "Возраст",
-        "payload": 12,
-        "type": "number"
-      },
-      "country": {
-        "title": "Страна",
-        "payload": "Россия",
-        "type": "string"
-      },
-      "role": {
-        "title": "Роль",
-        "payload": "ADMIN",
-        "type": "role"
-      },
-      "gender": {
-        "title": "Пол",
-        "payload": "MALE",
-        "type": "gender"
-      }
-    },
-    {
-      "id": "fe42",
-      "firstName": {
-        "title": "Имя",
-        "payload": "as",
-        "type": "string"
-      },
-      "lastname": {
-        "title": "Фамилия",
-        "payload": "sadfadsf",
-        "type": "string"
-      },
-      "email": {
-        "title": "Почта",
-        "payload": "1@gmail.com",
-        "type": "email"
-      },
-      "age": {
-        "title": "Возраст",
-        "payload": 12,
-        "type": "number"
-      },
-      "country": {
-        "title": "Страна",
-        "payload": "Россия",
-        "type": "string"
-      },
-      "role": {
-        "title": "Роль",
-        "payload": "ADMIN",
-        "type": "role"
-      },
-      "gender": {
-        "title": "Пол",
-        "payload": "MALE",
-        "type": "gender"
-      }
-    },
-    {
-      "id": "fe42",
-      "firstName": {
-        "title": "Имя",
-        "payload": "Роман",
-        "type": "string"
-      },
-      "lastname": {
-        "title": "Фамилия",
-        "payload": "sasdas",
-        "type": "string"
-      },
-      "email": {
-        "title": "Почта",
-        "payload": "1@gmail.com",
-        "type": "email"
-      },
-      "age": {
-        "title": "Возраст",
-        "payload": 11,
-        "type": "number"
-      },
-      "country": {
-        "title": "Страна",
-        "payload": "Россия",
-        "type": "string"
-      },
-      "role": {
-        "title": "Роль",
-        "payload": "USER",
-        "type": "role"
-      },
-      "gender": {
-        "title": "Пол",
-        "payload": "MALE",
-        "type": "gender"
-      }
-    },
-    {
-      "id": "fe42",
-      "firstName": {
-        "title": "Имя",
-        "payload": "Роман",
-        "type": "string"
-      },
-      "lastname": {
-        "title": "Фамилия",
-        "payload": "sasdas",
-        "type": "string"
-      },
-      "email": {
-        "title": "Почта",
-        "payload": "1@gmail.com",
-        "type": "email"
-      },
-      "age": {
-        "title": "Возраст",
-        "payload": 11,
-        "type": "number"
-      },
-      "country": {
-        "title": "Страна",
-        "payload": "Россия",
-        "type": "string"
-      },
-      "role": {
-        "title": "Роль",
-        "payload": "USER",
-        "type": "role"
-      },
-      "gender": {
-        "title": "Пол",
-        "payload": "FEMALE",
-        "type": "gender"
-      }
     }
   ],
   "users15": [
@@ -584,84 +383,6 @@
         "type": "string"
       },
       "id": "7a35"
-    },
-    {
-      "firstName": {
-        "title": "Имя",
-        "payload": "Алексей",
-        "type": "string"
-      },
-      "lastname": {
-        "title": "Фамилия",
-        "payload": "Иванов",
-        "type": "string"
-      },
-      "email": {
-        "title": "Почта",
-        "payload": "alex@example.com",
-        "type": "email"
-      },
-      "age": {
-        "title": "Возраст",
-        "payload": 16,
-        "type": "number"
-      },
-      "country": {
-        "title": "Страна",
-        "payload": "Россия",
-        "type": "string"
-      },
-      "role": {
-        "title": "Роль",
-        "payload": "ADMIN",
-        "type": "role"
-      },
-      "gender": {
-        "title": "Пол",
-        "payload": "MALE",
-        "type": "gender"
-      },
-      "city": {
-        "title": "Город",
-        "payload": "Москва",
-        "type": "string"
-      },
-      "pet": {
-        "title": "Имя питомца",
-        "payload": "Дружок",
-        "type": "string"
-      },
-      "company": {
-        "title": "Компания",
-        "payload": "Вконтакте",
-        "type": "string"
-      },
-      "position": {
-        "title": "Позиция",
-        "payload": "Разработчик",
-        "type": "string"
-      },
-      "hobby": {
-        "title": "Хобби",
-        "payload": "Чтение",
-        "type": "string"
-      },
-      "telegram": {
-        "title": "Телеграм",
-        "payload": "Дружок",
-        "type": "string"
-      },
-      "language": {
-        "title": "Язык",
-        "payload": "Русский",
-        "type": "string"
-      },
-      "favoriteMovie": {
-        "title": "Любимый фильм",
-        "payload": "Начало",
-        "type": "string"
-      },
-      "id": "6324"
     }
   ]
 }

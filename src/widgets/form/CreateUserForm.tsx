@@ -13,7 +13,6 @@ const CreateUserForm = () => {
 
     const {
         control,
-        getValues,
         register,
         handleSubmit,
         formState: { errors },
@@ -72,7 +71,7 @@ const CreateUserForm = () => {
                     <Button>Добавить запись</Button>
                 </Dialog.Trigger>
 
-                <Dialog.Content maxWidth="450px">
+                <Dialog.Content maxWidth="450px" >
                     <form onSubmit={handleSubmit(onSubmit)}>
                     <Dialog.Title>Добавить запись</Dialog.Title>
                     <Dialog.Description size="2" mb="4">
@@ -108,7 +107,7 @@ const CreateUserForm = () => {
                                                                 onValueChange={field.onChange}
                                                             >
                                                                 <Select.Trigger />
-                                                                <Select.Content side="bottom" align="start">
+                                                                <Select.Content position="popper">
                                                                     {entries.map(([value, label]) => (
                                                                         <Select.Item key={value} value={value}>
                                                                             {label}
